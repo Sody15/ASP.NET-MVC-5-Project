@@ -22,7 +22,7 @@ namespace Vidly.Controllers
         {
             _context.Dispose();
         }
-
+        
         [Route("Customers")]
         public ActionResult Customers()
         {

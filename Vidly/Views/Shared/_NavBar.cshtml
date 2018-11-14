@@ -23,9 +23,8 @@
         </div>
         <ul class="nav navbar-nav">
             <li>@Html.ActionLink("Customers", "Customers", "Customers")</li>
-            <li>@Html.ActionLink("Movies", "Movies", "Movies")</li>
-            <li>@Html.ActionLink("Register", "", "Register")</li>
-            <li>@Html.ActionLink("Log in", "", "LogIn")</li>
+            <li>@Html.ActionLink("Movies", "", "Movies")</li>
         </ul>
+        @Html.Partial("_LoginPartial")
     </div>
 </div>
