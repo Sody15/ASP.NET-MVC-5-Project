@@ -25,20 +25,12 @@ namespace Vidly.Controllers
         [Route("Movies")]
         public ActionResult Movies()
         {
-            var movies = _context.Movies.Include(c => c.Genre).ToList();
-
-            var viewModel = new MoviesViewModel
-            {
-                Movies = movies
-            };
-
-            return View(viewModel);
+            return View();
         }
 
         [Route("Movies/Details/{id}")]
         public ActionResult Details(int id)
         {
-            Console.WriteLine("Inside - Details()");
             var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == id);
              
             if (movie == null)
